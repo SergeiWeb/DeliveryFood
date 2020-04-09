@@ -1,0 +1,131 @@
+.catalog
+	margin: 23px 0 60px
+	&-top
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__title
+		+RobotoBold
+		font-size: 36px
+		line-height: 42px
+	&__search
+		width: 306px
+		height: 34px
+		background-image: url('../../images/catalog/catalog_search.svg')
+	&-container
+		margin: 45px 0 0
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&__card
+		background: $white
+		box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
+		border-radius: 7px
+	&-card
+		margin: 0 8px 30px
+		&__img
+			object-fit: cover
+			max-width: 384px
+			max-height: 251px
+		&__info
+			padding: 20px 25px 35px
+		&__desc
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-bottom: 10px
+		&__title
+			+RobotoBold
+			color: $black
+			font-size: 24px
+			line-height: 32px
+		&__time
+			+SFRegular
+			color: $white
+			font-size: 12px
+			line-height: 20px
+			padding: 1px 8px
+			background: $grey_9
+			border-radius: $borderRadius
+		&__spec
+			display: flex
+			align-items: center
+		&__rating
+			display: flex
+			+RobotoBold
+			color: $yellow
+			font-size: 18px
+			line-height: 32px
+		&__price
+			+RobotoRegular
+			color: $grey_7
+			font-size: 18px
+			line-height: 32px
+			margin-left: 25px
+		&__category
+			+RobotoRegular
+			color: $grey_7
+			font-size: 18px
+			line-height: 32px
+			margin-left: 25px
+			position: relative
+			&::before
+				content: ''
+				top: calc(50% - 2px)
+				left: -13px
+				width: 5px
+				height: 5px
+				background: $grey_7
+				border-radius: 50%
+				display: inline-flex
+				position: absolute
+
+@media screen and ( max-width: 1366px )
+	.catalog
+		&-card
+			width: 30%
+
+@media screen and ( max-width: 960px )
+	.catalog
+		margin-bottom: 40px
+		&-card
+			width: 45%
+
+@media screen and ( max-width: 600px )
+	.catalog
+		&-top
+			align-items: flex-start
+			flex-direction: column
+		&-container
+			justify-content: space-around
+		&-card
+			width: auto
+		&__title
+			margin-bottom: 20px
+		&__search
+			width: 100%
+
+@media screen and ( max-width: 320px )
+	.catalog
+		&-card
+			&__title
+				flex-basis: 60%
+			&__spec
+				flex-direction: column
+				align-items: flex-start
+			&__price
+				margin-left: 0
+			&__category
+				margin-left: 15px
+
+@media screen and ( max-width: 280px )
+	.catalog
+		&__title
+			font-size: 30px
+			line-height: 35px
+		&-card
+			&__title
+				font-size: 19px
+				line-height: 27px
+			// &__price, &__category
+			// 	display: block

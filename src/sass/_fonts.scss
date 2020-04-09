@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'SF Pro Display Regular';
+	src: url('../fonts/SFProDisplay-Regular.eot');
+	src: url('../fonts/SFProDisplay-Regular.eot#iefix') format('embedded-opentype'),
+		url('../fonts/SFProDisplay-Regular.woff') format('woff'),
+		url('../fonts/SFProDisplay-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SF Pro Display Semibold';
+	src: url('../fonts/SFProDisplay-Semibold.eot');
+	src: url('../fonts/SFProDisplay-Semibold.eot#iefix') format('embedded-opentype'),
+		url('../fonts/SFProDisplay-Semibold.woff') format('woff'),
+		url('../fonts/SFProDisplay-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@mixin SFRegular {
+	font-family: 'SF Pro Display Regular', sans-serif;
+}
+
+@mixin SFBold {
+	font-family: 'SF Pro Display Semibold', sans-serif;
+}
+
+@mixin RobotoRegular {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+@mixin RobotoBold {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+}

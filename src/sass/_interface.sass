@@ -1,0 +1,108 @@
+// Colors Vars
+$primary: #1890FF
+$yellow: #FFC107
+$yellow_light: #FFF1B8
+$black: #000000
+$black_text: #302C34
+$border_color: #D9D9D9
+$grey_6: #BFBFBF
+$grey_7: #8C8C8C
+$grey_8: #595959
+$grey_9: #262626
+$white: #ffffff
+
+// Border Vars
+$border: 1px solid $border_color
+$borderRadius: 2px
+
+*, *::before, *::after
+	box-sizing: border-box
+
+a
+	color: $black
+	display: inline-block
+	text-decoration: none
+	transition: all 0.3s ease-in-out
+
+body
+	font: 400 18px/1 'Roboto', sans-serif
+	background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%)
+	overflow-x: hidden
+
+img
+	display: block
+	width: 100%
+	height: auto
+
+.container
+	max-width: 1230px
+	margin: 0 auto
+	padding: 0 15px
+	width: 100%
+
+.wrapper
+	width: 100%
+	min-height: 100vh
+	overflow: hidden
+	display: flex
+	flex-direction: column
+
+.logo
+	max-width: 100px
+	max-height: 36px
+	width: 100%
+	height: 100%
+	img
+		object-fit: cover
+
+.search
+	color: $grey_7
+	padding-left: 32px
+	padding-right: 32px
+	border: $border
+	border-radius: $borderRadius
+	background-repeat: no-repeat
+	background-position: left 10px center
+	&::placeholder
+		+SFRegular
+		font-style: 16px
+		line-height: 24px
+		color: $grey_6
+
+.button
+	border-radius: 2px
+	padding: 8px 16px
+	border: $border
+	background: $white
+	color: $grey_8
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015)
+	border-radius: $borderRadius
+	transition: all 0.3s ease-in-out
+	+SFRegular
+	font-size: 16px
+	line-height: 24px
+	margin-right: 10px
+	&:last-child
+		margin-right: 0
+	&:hover
+		background: darken($white, 5%)
+	&-primary
+		background: $primary
+		border: $border
+		border-color: $primary
+		color: $white
+		box-shadow: none
+		&:hover
+			background: darken($primary, 10%)
+	&:hover
+		cursor: pointer
+
+
+@media screen and ( max-width: 1366px )
+	.container
+		max-width: 990px
+
+@media screen and ( max-width: 600px )
+	.button
+		padding: 5px 14px
+		font-size: 14px
