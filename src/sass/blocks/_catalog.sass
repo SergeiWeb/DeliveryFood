@@ -8,6 +8,7 @@
 		+RobotoBold
 		font-size: 36px
 		line-height: 42px
+		margin-right: 30px
 	&__search
 		width: 306px
 		height: 34px
@@ -41,35 +42,6 @@
 		&__spec
 			display: flex
 			align-items: center
-		&__rating
-			display: flex
-			+RobotoBold
-			color: $yellow
-			font-size: 18px
-			line-height: 32px
-		&__price
-			+RobotoRegular
-			color: $grey_7
-			font-size: 18px
-			line-height: 32px
-			margin-left: 25px
-		&__category
-			+RobotoRegular
-			color: $grey_7
-			font-size: 18px
-			line-height: 32px
-			margin-left: 25px
-			position: relative
-			&::before
-				content: ''
-				top: calc(50% - 2px)
-				left: -13px
-				width: 5px
-				height: 5px
-				background: $grey_7
-				border-radius: 50%
-				display: inline-flex
-				position: absolute
 
 @media screen and ( max-width: 960px )
 	.catalog

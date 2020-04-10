@@ -81,9 +81,6 @@ img
 	+SFRegular
 	font-size: 16px
 	line-height: 24px
-	margin-right: 10px
-	&:last-child
-		margin-right: 0
 	&:hover
 		background: darken($white, 5%)
 	&-primary
@@ -94,9 +91,11 @@ img
 		box-shadow: none
 		&:hover
 			background: darken($primary, 10%)
+	&__icon
+		display: inline-block
+		vertical-align: middle
 	&:hover
 		cursor: pointer
-
 
 .card
 	background: $white
@@ -107,6 +106,38 @@ img
 		object-fit: cover
 		max-width: 384px
 		max-height: 251px
+
+.rating
+	display: flex
+	+RobotoBold
+	color: $yellow
+	font-size: 18px
+	line-height: 32px
+	&__img
+		margin-right: 7px
+.price
+	+RobotoRegular
+	color: $grey_7
+	font-size: 18px
+	line-height: 32px
+	margin-left: 25px
+.category
+	+RobotoRegular
+	color: $grey_7
+	font-size: 18px
+	line-height: 32px
+	margin-left: 25px
+	position: relative
+	&::before
+		content: ''
+		top: calc(50% - 2px)
+		left: -13px
+		width: 5px
+		height: 5px
+		background: $grey_7
+		border-radius: 50%
+		display: inline-flex
+		position: absolute
 
 @media screen and ( max-width: 1366px )
 	.container

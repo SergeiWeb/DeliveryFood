@@ -1,0 +1,38 @@
+.restautant
+	margin-top: 0
+	&-top
+		justify-content: flex-start
+	&-card
+		flex-basis: 32%
+		&__desc
+			display: flex
+			flex-direction: column
+			padding: 25px 22px 30px
+		&__title
+			color: $black
+			+RobotoRegular
+			font-size: 24px
+			line-height: 32px
+			margin-bottom: 10px
+		&__text
+			color: $grey_7
+			+RobotoRegular
+			font-size: 18px
+			line-height: 21px
+			width: 60%
+		&__cta
+			margin-top: 25px
+		&__btn
+			margin-right: 32px
+		&__price
+			color: $black
+			+RobotoBold
+			font-size: 20px
+			line-height: 32px
+
+@media screen and ( max-width: 960px )
+	.restautant
+		&-card
+			flex-basis: auto
+			&__text
+				width: 100%
