@@ -1,10 +1,12 @@
 // Colors Vars
 $primary: #1890FF
+$primary_light: #40A9FF
 $yellow: #FFC107
 $yellow_light: #FFF1B8
 $black: #000000
 $black_text: #302C34
 $border_color: #D9D9D9
+$grey_5: #D9D9D9
 $grey_6: #BFBFBF
 $grey_7: #8C8C8C
 $grey_8: #595959
@@ -28,11 +30,18 @@ body
 	font: 400 18px/1 'Roboto', sans-serif
 	background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%)
 	overflow-x: hidden
+	&.blocking
+		overflow: hidden
 
 img
 	display: block
 	width: 100%
 	height: auto
+
+button
+	transition: all 0.3s ease-in-out
+	&:hover
+		cursor: pointer
 
 .container
 	max-width: 1230px
@@ -77,12 +86,13 @@ img
 	color: $grey_8
 	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015)
 	border-radius: $borderRadius
-	transition: all 0.3s ease-in-out
 	+SFRegular
 	font-size: 16px
 	line-height: 24px
 	&:hover
 		background: darken($white, 5%)
+	&:active
+		background: darken($white, 8%)
 	&-primary
 		background: $primary
 		border: $border
@@ -91,17 +101,25 @@ img
 		box-shadow: none
 		&:hover
 			background: darken($primary, 10%)
+	&-black
+		background: $grey_9
+		border: none
+		color: $white
+		&:hover
+			background: lighten($black, 20%)
 	&__icon
 		display: inline-block
 		vertical-align: middle
-	&:hover
-		cursor: pointer
 
 .card
 	background: $white
 	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
 	border-radius: 7px
 	margin: 0 8px 30px
+	transition: all 0.3s ease-in-out
+	&:hover
+		box-shadow: none
+		transform: scale(0.995)
 	&__img
 		object-fit: cover
 		max-width: 384px

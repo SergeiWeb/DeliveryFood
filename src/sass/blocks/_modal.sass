@@ -1,0 +1,112 @@
+.modal
+	position: fixed
+	width: 100vw
+	height: 100vh
+	top: 0
+	left: 0
+	z-index: 88888
+	background: rgba($black, 0.4)
+	display: none
+	&.is-open
+		display: flex
+	&-window
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		max-width: 780px
+		min-height: 550px
+		width: 95%
+		border-radius: 5px
+		background: $white
+		z-index: 99999
+		padding: 40px 45px
+		margin: auto
+	&-top
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+	&__title
+		color: $black
+		+RobotoBold
+		font-size: 36px
+		line-height: 42px
+	&__close
+		width: 25px
+		height: 25px
+		position: relative
+		background: transparent
+		border: none
+		&::before, &::after
+			content: ''
+			top: 10px
+			left: 0
+			width: 25px
+			height: 4px
+			background: $black
+			position: absolute
+			border-radius: 50px
+		&::before
+			transform: rotate(-45deg)
+		&::after
+			transform: rotate(45deg)
+	&-body
+		position: relative
+		&__item
+			display: flex
+			justify-content: space-between
+			align-items: center
+	&-item
+		position: relative
+		margin-bottom: 15px
+		padding-bottom: 8px
+		border-bottom: 1px solid $grey_5
+		&__title
+			color: $black
+			+RobotoRegular
+			font-size: 18px
+			line-height: 32px
+		&__price
+			+RobotoBold
+			color: $black
+			font-size: 20px
+			line-height: 32px
+		&__action
+			display: flex
+			align-items: center
+			margin: 0 15px 0 47px
+		&__btn
+			+SFRegular
+			color: $primary_light
+			font-size: 14px
+			line-height: 22px
+			padding: 5px 16px
+			border: 1px solid $primary_light
+			border-radius: $borderRadius
+			background: transparent
+			&:hover
+				background: lighten($grey_6, 20%)
+			&:active
+				background: lighten($primary_light, 20%)
+		&__quantity
+			color: $black
+			+SFRegular
+			font-size: 16px
+			line-height: 24px
+			margin: 0 13px
+		&__info
+			display: flex
+			align-items: center
+	&-footer
+		display: flex
+		justify-content: space-between
+		align-items: center
+		position: relative
+		&__btn
+			padding: 15px 20px
+			+RobotoBold
+			font-size: 20px
+			line-height: 23px
+	&__cta
+		&-btn
+			margin-left: 18px
