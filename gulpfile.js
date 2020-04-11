@@ -51,6 +51,7 @@ gulp.task('html', function () {
 gulp.task('libJS', function () {
 	return gulp.src([
 		'node_modules/jquery/dist/jquery.min.js',
+		'node_modules/wowjs/dist/wow.min.js',
 		// 'node_modules/slick-carousel/slick/slick.min.js',
 	])
 		.pipe(plumber())
@@ -101,14 +102,14 @@ gulp.task('sass', function () {
 	return gulp.src('src/sass/**/*.sass')
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
-		.pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: ['last 8 versions'],
 			overrideBrowserslist: ['last 2 versions'],
 			cascade: false
 		}))
 		.pipe(sourcemaps.write())
-		// .pipe(rename({ suffix: '.min' }))
+		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('build/css/style'))
 		.pipe(browserSync.reload({ stream: true }));
 });
